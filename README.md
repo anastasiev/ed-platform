@@ -4,6 +4,8 @@ The goal of this project is to create a Node.js/Express.js project sample/starte
 <img width="595" alt="image" src="https://user-images.githubusercontent.com/22165556/216602367-8bc84804-4227-431d-b25f-76ad61614fec.png">
 
 ## Branches
-Branch: main (Base Image for Nodejs)  <br />
-Branch: nodejs-postgres (Nodejs integrated with Postgres/SQL)  <br />
-Branch: nodejs-rabbitmq (Nodejs integrated with Rabbitmq)  <br />
+all Branches include Dockerfile/dependencies for Nodejs/Express.js, base code and , Health probes, K8s YAMLs (deployment, service, configmap , secret) <br />
+
+1) Branch: main (Base Image for Nodejs):  <br />
+2) Branch: nodejs-postgres (Nodejs integrated with Postgres/SQL):  <br />
+3) Branch: nodejs-rabbitmq (Nodejs integrated with Rabbitmq): <br />
