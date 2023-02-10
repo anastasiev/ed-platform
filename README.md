@@ -9,3 +9,11 @@ all Branches include Dockerfile/dependencies for Nodejs/Express.js, base code an
 1) Branch: main (Base Image for Nodejs):  <br />
 2) Branch: nodejs-postgres (Nodejs integrated with Postgres/SQL):  <br />
 3) Branch: nodejs-rabbitmq (Nodejs integrated with Rabbitmq): <br />
+
+## Helm charts for rabbitmq and postgress
+helm repo add bitnami https://charts.bitnami.com/bitnami  <br />
+helm install my-release bitnami/rabbitmq  <br />
+
+helm repo add bitnami https://charts.bitnami.com/bitnami  <br />
+helm install my-release bitnami/postgresql  <br />
+ 
