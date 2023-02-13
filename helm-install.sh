@@ -1,1 +1,1 @@
-helm install node-app ./helm -f ./helm/values.yaml
+helm install node-app ./helm
