@@ -1,0 +1,1 @@
+export {default as GreetingRouter} from './greeting.router';
