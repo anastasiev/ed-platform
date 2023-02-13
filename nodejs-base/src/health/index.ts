@@ -1,0 +1,1 @@
+export {default as HealthRouter} from './health.router';
