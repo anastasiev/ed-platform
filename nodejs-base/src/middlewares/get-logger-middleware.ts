@@ -5,7 +5,9 @@ import {NextFunction, Request, Response} from "express";
 export const getLoggerMiddleware = () => {
     const logger = Container.get(CustomLogger);
     return async (req: Request, res: Response, next: NextFunction) => {
+        res.on('finish', () => {
+            logger.info(`HTTP ${req.method} ${req.url} ${res.statusCode}`);
+        });
         next();
-        logger.info(`HTTP ${req.method} ${req.url} ${res.statusCode}`);
     }
 }

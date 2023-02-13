@@ -11,9 +11,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const mainRouter = express.Router();
 
+// add routers here
 mainRouter.use(GreetingRouter)
 
-// app.use(getLoggerMiddleware());
+app.use(getLoggerMiddleware());
 app.use(mainRouter);
 app.use(errorHandler);
 app.listen(8080, function() {
