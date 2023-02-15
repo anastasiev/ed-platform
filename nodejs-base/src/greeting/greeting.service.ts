@@ -7,7 +7,7 @@ export class GreetingService {
     private greetingTemplate: string;
 
     constructor() {
-        this.greetingTemplate = process.env.GREETING as string;
+        this.greetingTemplate = process.env.GREETING || "Hello, %s!";
     }
 
     public getGreetingContent(name: string = DEFAULT_NAME): IGreetingContent {
