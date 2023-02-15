@@ -83,3 +83,17 @@ It catches all errors, checks our custom ones and change status code if needed. 
 For incoming data validation we use Joi - https://joi.dev/api/?v=17.7.0
 We created ```validatePayload(obj, schema)``` function which consume incoming data and schema for validation.
 Joi allows validate any type of data: email, lover/upper cased strings, different ids, ip, number ranges, use reg exp, etc.
+
+### Dependency injection
+
+We use **typedi** library for di. It works similar to Springs DI concept: we could just annotate as **Service** classes which should be controlled by DI container. For getting instances form DI container, you could use ```Container.get``` or constructor injection:
+
+```typescript
+@Service()
+export class SomeRouter {
+    constructor(
+        private readonly someService: SomeService
+    ) {}
+}
+```
+and **this.someService** will be available for this example.
