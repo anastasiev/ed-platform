@@ -8,7 +8,6 @@ export default class ConfigReader {
         this.configPath = process.env.CONFIG_LOCATION || ""
     }
     getAppConfig(): any{
-        console.log(this.configPath);
         return propertiesToJson(this.configPath)
     }
 }
