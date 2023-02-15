@@ -4,7 +4,6 @@
 - npm 8.5.5
 - docker
 - kubernetes
-- helm
 
 ## Local development
 
@@ -20,7 +19,7 @@ npm run start
 cd nodejs-base
 ./build-docker.sh
 cd ..
-./helm-install.sh
+./start-k8s.sh
 ```
 
 ## Node app stucture
@@ -107,6 +106,7 @@ and **this.someService** will be available for this example.
 - ```express-async-handler``` - small wrapper of async request handlers for reducing boilerplate code
 - ```joi``` - request validation
 - ```winston``` - logger
+- ```properties-file``` - convert properties file (java style) to json
 #### Dev libraries:
 
 - ```@tsconfig/node16``` - typescript config
