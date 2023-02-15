@@ -97,3 +97,24 @@ export class SomeRouter {
 }
 ```
 and **this.someService** will be available for this example.
+
+### Libraries
+
+- ```express``` - web framework
+- ```body-parser``` - middleware for parsing request body and query params
+- ```reflect-metadata``` - required for dependency injection
+- ```typedi``` - dependency injection tools
+- ```express-async-handler``` - small wrapper of async request handlers for reducing boilerplate code
+- ```joi``` - request validation
+- ```winston``` - logger
+#### Dev libraries:
+
+- ```@tsconfig/node16``` - typescript config
+- ```@types/node```
+- ```@types/express``` 
+- ```@types/joi``` - types for modules
+- ```@typescript-eslint/eslint-plugin```
+- ```@typescript-eslint/parser```
+- ```eslint```
+- ```prettier``` - format code libraries
+- ```typescript``` - tolls for app building 
