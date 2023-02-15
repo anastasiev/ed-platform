@@ -8,7 +8,8 @@
     "typedi": "^0.10.0",
     "express-async-handler": "^1.2.0",
     "joi": "^17.7.1",
-    "winston": "^3.0.0"
+    "winston": "^3.0.0",
+    "properties-file": "^2.1.27"
   },
   "scripts": {
     "start": "node dist/index.js",
