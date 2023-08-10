@@ -1,0 +1,12 @@
+{
+  "admin@local.com": {
+    "email": "admin@local.com",
+    "name": "Admin",
+    "passwordHash": "$2b$10$4/RJ3mhqWfdaHnN8nS02Hu7PyC2MdQHSBjv3tL084PLbFzYMA64Iq"
+  },
+  "dmytro@gmail.com": {
+    "email": "dmytro@gmail.com",
+    "name": "Dima",
+    "passwordHash": "$2b$10$LQfcnWgtgQID7shY7u7S4.UL9wdlF7RSlFBDOwyk9GH21xd2g2F4G"
+  }
+}
