@@ -42,7 +42,7 @@ export class QuestionsRepository {
             throw new CustomError(409, 'Invalid topic or chapter');
         }
         const questionsPaths = fs.readdirSync(questionsFolder)
-            .map((questionFileName: string) => path.join(questionsFolder, questionFileName));
+            .map((questionFileName: string) => path.join('/', topic, chapter, 'questions', questionFileName));
         return questionsPaths;
     }
 
