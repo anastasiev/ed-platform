@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 import express from 'express';
+import * as path from 'path';
 import bodyParser from 'body-parser';
 import {AuthRouter} from "./auth";
 import {QuestionRouter} from "./questions";
@@ -16,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const mainRouter = express.Router();
 const { SERVICE_PORT } = Container.get(ConfigReader).getAppConfig();
+app.use('/static', express.static(path.join(__dirname, '../static')))
 // add routers here
 mainRouter.use(AuthRouter);
 mainRouter.use('/questions', jwtVerificationMiddleware, QuestionRouter);
@@ -27,4 +29,3 @@ app.use(errorHandler);
 app.listen(SERVICE_PORT, function() {
     console.log('Express server listening on port ' + SERVICE_PORT);
 });
-
