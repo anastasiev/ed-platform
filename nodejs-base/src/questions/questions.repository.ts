@@ -14,10 +14,16 @@ export class QuestionsRepository {
         this.filters = {topics: []};
         this.answers = {};
         fs.readdirSync(this.rootContent).forEach(topic => {
+            if (topic.startsWith('.')) {
+                return;
+            }
             this.filters.topics.push(topic);
             this.filters[topic] = [];
             const topicFolder = path.join(this.rootContent, topic);
             fs.readdirSync(topicFolder).forEach(chapter => {
+                if (chapter.startsWith('.')) {
+                    return;
+                }
                 this.filters[topic].push(chapter)
                 const answersFile = path.join(topicFolder, chapter, 'answers.csv');
                 const answersContent = fs.readFileSync(answersFile).toString();
