@@ -31,7 +31,7 @@ export class QuestionsRepository {
                     skip_empty_lines: true
                 });
                 records.forEach((record: any) => {
-                   const questionFile = path.join(topicFolder, chapter, 'questions', record[0]);
+                   const questionFile = path.join('/', topic, chapter, 'questions', record[0]);
                    this.answers[questionFile] = record[1];
                 });
             });
