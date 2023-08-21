@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const mainRouter = express.Router();
 const { SERVICE_PORT } = Container.get(ConfigReader).getAppConfig();
-app.use('/static', express.static(path.join(__dirname, '../static')))
+app.use('/content', express.static(path.join(__dirname, '../static')))
 // add routers here
 mainRouter.use(AuthRouter);
 mainRouter.use('/questions', jwtVerificationMiddleware, QuestionRouter);
