@@ -15,7 +15,7 @@ router.post('/login', asyncHandler(async (req, res) => {
     validatePayload(
         req.body,
         Joi.object({
-            email: Joi.string().max(100),
+            email: Joi.string().email().max(100),
             password: Joi.string().max(100),
         })
     );
@@ -41,7 +41,7 @@ router.post('/register', asyncHandler(async (req, res) => {
     validatePayload(
         req.body,
         Joi.object({
-            email: Joi.string().max(100),
+            email: Joi.string().email().max(100),
             password: Joi.string().max(100),
             name: Joi.string().max(100),
         })
